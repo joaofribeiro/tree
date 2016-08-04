@@ -21826,7 +21826,7 @@
 	          checkedKeys: checkedKeys
 	        });
 	      }
-	      this.props.onCheck(checkedKeys, newSt);
+	      this.props.onCheck(this.checkKeys, newSt);
 	    }
 	  };
 	
