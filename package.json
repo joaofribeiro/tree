@@ -55,6 +55,7 @@
   "dependencies": {
     "classnames": "2.x",
     "object-assign": "4.x",
+    "prop-types": "^15.6.1",
     "rc-animate": "2.x"
   },
   "pre-commit": [
