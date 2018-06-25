@@ -8,11 +8,6 @@
     "react-tree",
     "tree"
   ],
-  "main": "lib/index",
-  "files": [
-    "assets/*.css",
-    "lib"
-  ],
   "homepage": "https://github.com/joaofribeiro/tree",
   "author": "jr@mlabs.no",
   "repository": {
