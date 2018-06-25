@@ -1,27 +1,27 @@
 webpackJsonp([1],{
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(180);
+	module.exports = __webpack_require__(257);
 
 
-/***/ },
+/***/ }),
 
-/***/ 180:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 257:
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"rc-tree/assets/index.less\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
-	__webpack_require__(181);
+	__webpack_require__(258);
 	
 	var _react = __webpack_require__(2);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(36);
+	var _reactDom = __webpack_require__(39);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
@@ -88,7 +88,7 @@ webpackJsonp([1],{
 	        { style: { color: 'blue' }, onClick: this.onEdit },
 	        'Edit'
 	      ),
-	      ' ',
+	      '\xA0',
 	      _react2.default.createElement(
 	        'span',
 	        { style: { color: 'red' }, onClick: this.onDel },
@@ -136,14 +136,14 @@ webpackJsonp([1],{
 	
 	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
 
-/***/ },
+/***/ }),
 
-/***/ 181:
-/***/ function(module, exports) {
+/***/ 258:
+/***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=basic.js.map

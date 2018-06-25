@@ -1,15 +1,15 @@
 webpackJsonp([3],{
 
 /***/ 0:
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(234);
+	module.exports = __webpack_require__(295);
 
 
-/***/ },
+/***/ }),
 
-/***/ 183:
-/***/ function(module, exports) {
+/***/ 260:
+/***/ (function(module, exports) {
 
 	'use strict';
 	
@@ -25,10 +25,10 @@ webpackJsonp([3],{
 	/* eslint no-loop-func: 0*/
 	
 	function generateData() {
-	  var x = arguments.length <= 0 || arguments[0] === undefined ? 3 : arguments[0];
-	  var y = arguments.length <= 1 || arguments[1] === undefined ? 2 : arguments[1];
-	  var z = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
-	  var gData = arguments.length <= 3 || arguments[3] === undefined ? [] : arguments[3];
+	  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+	  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+	  var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
+	  var gData = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : [];
 	
 	  // x：每一级下的节点总数。y：每级节点里有y个节点、存在子节点。z：树的level层级数（0表示一级）
 	  function _loop(_level, _preKey, _tns) {
@@ -56,9 +56,9 @@ webpackJsonp([3],{
 	  return gData;
 	}
 	function calcTotal() {
-	  var x = arguments.length <= 0 || arguments[0] === undefined ? 3 : arguments[0];
-	  var y = arguments.length <= 1 || arguments[1] === undefined ? 2 : arguments[1];
-	  var z = arguments.length <= 2 || arguments[2] === undefined ? 1 : arguments[2];
+	  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+	  var y = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
+	  var z = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
 	
 	  /* eslint no-param-reassign:0*/
 	  var rec = function rec(n) {
@@ -128,7 +128,7 @@ webpackJsonp([3],{
 	
 	function loopData(data, callback) {
 	  var loop = function loop(d) {
-	    var level = arguments.length <= 1 || arguments[1] === undefined ? 0 : arguments[1];
+	    var level = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
 	
 	    d.forEach(function (item, index) {
 	      var pos = level + '-' + index;
@@ -217,10 +217,10 @@ webpackJsonp([3],{
 	  return res;
 	}
 
-/***/ },
+/***/ }),
 
-/***/ 234:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 295:
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -230,7 +230,7 @@ webpackJsonp([3],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _reactDom = __webpack_require__(36);
+	var _reactDom = __webpack_require__(39);
 	
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 	
@@ -238,7 +238,7 @@ webpackJsonp([3],{
 	
 	var _rcTree2 = _interopRequireDefault(_rcTree);
 	
-	var _bigDataGenerator = __webpack_require__(235);
+	var _bigDataGenerator = __webpack_require__(296);
 	
 	var _bigDataGenerator2 = _interopRequireDefault(_bigDataGenerator);
 	
@@ -332,11 +332,11 @@ webpackJsonp([3],{
 	        _react2.default.createElement(
 	          'h5',
 	          { style: { margin: 10 } },
-	          '大数据量下优化建议：'
+	          '\u5927\u6570\u636E\u91CF\u4E0B\u4F18\u5316\u5EFA\u8BAE\uFF1A'
 	        ),
-	        '初始展开的节点少，向dom中插入节点就会少，速度更快。 ',
+	        '\u521D\u59CB\u5C55\u5F00\u7684\u8282\u70B9\u5C11\uFF0C\u5411dom\u4E2D\u63D2\u5165\u8282\u70B9\u5C31\u4F1A\u5C11\uFF0C\u901F\u5EA6\u66F4\u5FEB\u3002 ',
 	        _react2.default.createElement('br', null),
-	        'treeNodes 总数据量尽量少变化，缓存并复用计算出的 treeNodes，可在 componentWillUpdate 等时机做判断。 ',
+	        'treeNodes \u603B\u6570\u636E\u91CF\u5C3D\u91CF\u5C11\u53D8\u5316\uFF0C\u7F13\u5B58\u5E76\u590D\u7528\u8BA1\u7B97\u51FA\u7684 treeNodes\uFF0C\u53EF\u5728 componentWillUpdate \u7B49\u65F6\u673A\u505A\u5224\u65AD\u3002 ',
 	        _react2.default.createElement('br', null)
 	      ),
 	      this.state.gData.length ? _react2.default.createElement(
@@ -387,10 +387,10 @@ webpackJsonp([3],{
 	
 	_reactDom2.default.render(_react2.default.createElement(Demo, null), document.getElementById('__react-content'));
 
-/***/ },
+/***/ }),
 
-/***/ 235:
-/***/ function(module, exports, __webpack_require__) {
+/***/ 296:
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
@@ -402,7 +402,7 @@ webpackJsonp([3],{
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _util = __webpack_require__(183);
+	var _util = __webpack_require__(260);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -448,10 +448,10 @@ webpackJsonp([3],{
 	    };
 	  },
 	  render: function render() {
-	    var _props = this.props;
-	    var x = _props.x;
-	    var y = _props.y;
-	    var z = _props.z;
+	    var _props = this.props,
+	        x = _props.x,
+	        y = _props.y,
+	        z = _props.z;
 	
 	    return _react2.default.createElement(
 	      'div',
@@ -497,7 +497,7 @@ webpackJsonp([3],{
 	      _react2.default.createElement(
 	        'p',
 	        { style: { fontSize: 12 } },
-	        'x：每一级下的节点总数。y：每级节点里有y个节点、存在子节点。z：树的level层级数（0表示一级）'
+	        'x\uFF1A\u6BCF\u4E00\u7EA7\u4E0B\u7684\u8282\u70B9\u603B\u6570\u3002y\uFF1A\u6BCF\u7EA7\u8282\u70B9\u91CC\u6709y\u4E2A\u8282\u70B9\u3001\u5B58\u5728\u5B50\u8282\u70B9\u3002z\uFF1A\u6811\u7684level\u5C42\u7EA7\u6570\uFF080\u8868\u793A\u4E00\u7EA7\uFF09'
 	      )
 	    );
 	  }
@@ -505,7 +505,7 @@ webpackJsonp([3],{
 	exports.default = Gen;
 	module.exports = exports['default'];
 
-/***/ }
+/***/ })
 
 });
 //# sourceMappingURL=big-data.js.map
