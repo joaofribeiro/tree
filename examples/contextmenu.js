@@ -4173,7 +4173,9 @@ webpackJsonp([4],[
 	    }
 	    _this5.preClickTime = 0;
 	    _this5.preTouchTime = 0;
-	    event.preventDefault();
+	    if (event && event.preventDefault) {
+	      event.preventDefault();
+	    }
 	    var nextVisible = !_this5.state.popupVisible;
 	    if (_this5.isClickToHide() && !nextVisible || nextVisible && _this5.isClickToShow()) {
 	      _this5.setPopupVisible(!_this5.state.popupVisible, event);
