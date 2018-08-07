@@ -196,7 +196,7 @@ class TreeNode extends React.Component {
       (children.type === TreeNode ||
       Array.isArray(children) &&
       children.every((item) => {
-        return item.type === TreeNode;
+        return item.type.name === TreeNode.name;
       }))) {
       const cls = {
         [`${props.prefixCls}-child-tree`]: true,
